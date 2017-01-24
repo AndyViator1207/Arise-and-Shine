@@ -1,4 +1,18 @@
 <% provide(:title,"Home") %>
 
-<h1>Static#home</h1>
-<p>@ Home :D</p>
+<div class="center jumbotron">
+
+	<h2>@ Home :D</h2>
+	<p>Home = Heaven</p>
+	
+	  <%= link_to "Wenn Du unbedingt auf Irgendwas drücken musst...", '#', class: "btn btn-lg btn-primary" %>
+
+</div>
+
+Buntes Bild darf natürlich nicht fehlen ...<br>
+<%= link_to image_tag("http://railstutorial.org/rails.png", alt: "Rails logo"),
+            'http://rubyonrails.org/' %>
+			
+<p>	Und noch ein Bild:
+	<%= image_tag("Png-logo.png") %>
+</p>
