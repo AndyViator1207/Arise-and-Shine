@@ -1,16 +1,36 @@
 <!DOCTYPE html>
 <html>
-    <title><%= display_title(yield(:title)) %></title>
+
   <head>
+    <title><%= display_title(yield(:title)) %></title>
     <%= csrf_meta_tags %>
 
-    <!-- %= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' % -->
-    <!-- %= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' % -->
-    <%= stylesheet_link_tag    'default', media: 'all', 'data-turbolinks-track' => true %>
-    <%= javascript_include_tag 'default', 'data-turbolinks-track' => true %>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <!--%= stylesheet_link_tag    'default', media: 'all', 'data-turbolinks-track' => true %-->
+    <!--%= javascript_include_tag 'default', 'data-turbolinks-track' => true %-->
   </head>
 
   <body>
-    <%= yield %>
-  </body>
+  
+    <h1><%= display_title(yield(:title)) %></h1>
+
+    <header class="navbar navbar-fixed-top navbar-inverse">
+      <div class="container">
+        <%= link_to "Arise and SHINE!", '#', id: "logo" %>
+        <nav>
+          <ul class="nav navbar-nav navbar-right">
+            <li><%= link_to "Home",   '#' %></li>
+            <li><%= link_to "Help",   '#' %></li>
+            <li><%= link_to "Log in", '#' %></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+  
+	<div class="container">
+		<%= yield %>
+	</div>
+
+	</body>
 </html>
